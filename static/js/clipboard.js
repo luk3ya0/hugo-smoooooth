@@ -10,9 +10,10 @@ function addCopyButtons(clipboard) {
                     /* Chrome doesn't seem to blur automatically, leaving the button
                        in a focused state */
                     button.innerText = '✓';
+                    button.style.color = "green";
                     setTimeout(function() {
                         button.innerText = '⎘';
-                        button.style.color = "var(--primary)";
+                        button.style.color = "gray";
                     }, 2000);
                 },
                 function(error) {
