@@ -270,6 +270,7 @@ summary {
 /* occupy all the space */
 #page {
     min-height: 1400px;
+    width: 100%;
     height: auto;
     margin: 0;
     padding: 0;
@@ -289,6 +290,10 @@ div#container {
     background-color: transparent !important;
     max-width: 960px;
     margin: 0 auto;
+}
+
+img {
+    max-width: 960px;
 }
 
 @media (max-width: 1000px) {
@@ -317,7 +322,7 @@ div#container {
         margin: 0 1em !important;
     }
     img {
-        width: 100%;
+        max-width: 720px;
     }
 }
 
