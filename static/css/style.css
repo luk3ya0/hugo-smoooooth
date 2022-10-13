@@ -228,7 +228,7 @@ summary {
 #switch-label {
     position: fixed;
     bottom: 4rem;
-    left: 3rem;
+    right: 3rem;
 }
 
 #switch-label::before {
@@ -246,24 +246,7 @@ summary {
     z-index: 1;
     position: fixed;
     bottom: calc(4rem - 25px);
-    left: calc(3rem - 10px);
-}
-
-@media (max-width: 1000px) {
-    #switch-label {
-        left: auto;
-        bottom: auto;
-        right: 1vw;
-        top: 1vh;
-    }
-
-    #switch-label::after {
-        position: fixed;
-        top: calc(1vh + 3px);
-        right: calc(1vw + 30px);
-        left: auto;
-        bottom: auto;
-    }
+    right: calc(3rem - 10px);
 }
 
 #theme-switch:focus ~ #page #switch-label::before,
@@ -309,15 +292,29 @@ div#container {
 }
 
 @media (max-width: 1000px) {
+    #switch-label {
+        left: 1vw;
+        right: auto;
+        bottom: auto;
+        top: 1vh;
+    }
+
+    #switch-label::after {
+        position: fixed;
+        top: calc(1vh + 3px);
+        left: calc(1vw + 30px);
+        right: auto;
+        bottom: auto;
+    }
     #page {
         width: 100%;
-        margin: 0 1em;
+        margin: 0 !important;
     }
     div#container {
         height: auto;
         background-color: transparent !important;
         max-width: 100%;
-        margin: 0 auto;
+        margin: 0 1em !important;
     }
     img {
         width: 100%;
