@@ -503,18 +503,18 @@ details.code:not([open]) summary {
 .gutter {
     position: absolute;
     top: 0;
-    left: -2.3rem;
+    left: -2rem;
     width: 2rem;
     padding-right: 0.3rem;
     padding-top: 5px;
     height: calc(100% - 10px);
     z-index: 1;
     transition: opacity 200ms;
-    opacity: 0;
+    opacity: 1;
     font-size: 1em;
 }
 
-.gutter:hover {
+.gutter {
     opacity: 1;
 }
 
@@ -527,11 +527,11 @@ details.code:not([open]) summary {
     color: var(--text-light);
 }
 
-.gutter *:hover {
+.gutter {
     color: var(--text-gray);
 }
 
-.gutter *:active {
+.gutter {
     font-weight: bold;
 }
 
