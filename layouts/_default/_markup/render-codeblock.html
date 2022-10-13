@@ -1,7 +1,7 @@
 {{ $class := .Attributes.class | default ""    }}
 {{ $lang  := .Attributes.lang  | default .Type }}
 {{ if transform.CanHighlight $lang }}
-<details class='code' open>
+<details class='code'>
     <summary><span class="code-up">{{ $lang }}</span></summary>
     <div class='gutter'>
         <button title='Copy to clipboard' onclick='copyPreToClipbord(this)'>⎘</button>
@@ -12,7 +12,7 @@
     </div>
 </details>
 {{else}}
-<details class='code' open>
+<details class='code'>
     <summary><span class="code-up">{{ $lang }}</span></summary>
     <div class='gutter'>
         <button title='Copy to clipboard' onclick='copyPreToClipbord(this)'>⎘</button>
