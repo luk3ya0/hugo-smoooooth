@@ -1,0 +1,916 @@
+@media (prefers-color-scheme: light) {
+    #theme-switch:checked ~ #page {
+        /* Background */
+        --chroma-fg: #b0c4de;
+        --chroma-bg: none;
+        /* LineNumbersTable */
+        --chroma-lnt: #58626f;
+        /* LineNumbers */
+        --chroma-ln: #58626f;
+        /* Keyword */
+        --chroma-k: #76a9f9;
+        /* KeywordConstant */
+        --chroma-kc: #e5c07b;
+        /* KeywordDeclaration */
+        --chroma-kd: #76a9f9;
+        /* KeywordNamespace */
+        --chroma-kn: #76a9f9;
+        /* KeywordPseudo */
+        --chroma-kp: #76a9f9;
+        /* KeywordReserved */
+        --chroma-kr: #76a9f9;
+        /* KeywordType */
+        --chroma-kt: #e5c07b;
+        /* Name */
+        --chroma-n: #aa89ea;
+        /* NameAttribute */
+        --chroma-na: #cebc3a;
+        /* NameBuiltin */
+        --chroma-nb: #e5c07b;
+        /* NameBuiltinPseudo */
+        --chroma-bp: #aa89ea;
+        /* NameClass */
+        --chroma-nc: #ca72ff;
+        /* NameConstant */
+        --chroma-no: #aa89ea;
+        /* NameDecorator */
+        --chroma-nd: #e5c07b;
+        /* NameEntity */
+        --chroma-ni: #bda26f;
+        /* NameException */
+        --chroma-ne: #fd7474;
+        /* NameFunction */
+        --chroma-nf: #00b1f7;
+        /* NameFunctionMagic */
+        --chroma-fm: #aa89ea;
+        /* NameLabel */
+        --chroma-nl: #f5a40d;
+        /* NameNamespace */
+        --chroma-nn: #ca72ff;
+        /* NameOther */
+        --chroma-nx: #aa89ea;
+        /* NameProperty */
+        --chroma-py: #cebc3a;
+        /* NameTag */
+        --chroma-nt: #76a9f9;
+        /* NameVariable */
+        --chroma-nv: #dcaeea;
+        /* NameVariableClass */
+        --chroma-vc: #dcaeea;
+        /* NameVariableGlobal */
+        --chroma-vg: #dcaeea;
+        /* NameVariableInstance */
+        --chroma-vi: #e06c75;
+        /* NameVariableMagic */
+        --chroma-vm: #dcaeea;
+        /* Literal */
+        --chroma-l: #98c379;
+        /* LiteralDate */
+        --chroma-ld: #98c379;
+        /* LiteralString */
+        --chroma-s: #98c379;
+        /* LiteralStringAffix */
+        --chroma-sa: #98c379;
+        /* LiteralStringBacktick */
+        --chroma-sb: #98c379;
+        /* LiteralStringChar */
+        --chroma-sc: #98c379;
+        /* LiteralStringDelimiter */
+        --chroma-dl: #98c379;
+        /* LiteralStringDoc */
+        --chroma-sd: #7e97c3;
+        /* LiteralStringDouble */
+        --chroma-s2: #63c381;
+        /* LiteralStringEscape */
+        --chroma-se: #d26464;
+        /* LiteralStringHeredoc */
+        --chroma-sh: #98c379;
+        /* LiteralStringInterpol */
+        --chroma-si: #98c379;
+        /* LiteralStringOther */
+        --chroma-sx: #70b33f;
+        /* LiteralStringRegex */
+        --chroma-sr: #56b6c2;
+        /* LiteralStringSingle */
+        --chroma-s1: #98c379;
+        /* LiteralStringSymbol */
+        --chroma-ss: #56b6c2;
+        /* LiteralNumber */
+        --chroma-m: #d19a66;
+        /* LiteralNumberBin */
+        --chroma-mb: #d19a66;
+        /* LiteralNumberFloat */
+        --chroma-mf: #d19a66;
+        /* LiteralNumberHex */
+        --chroma-mh: #d19a66;
+        /* LiteralNumberInteger */
+        --chroma-mi: #d19a66;
+        /* LiteralNumberIntegerLong */
+        --chroma-il: #d19a66;
+        /* LiteralNumberOct */
+        --chroma-mo: #d19a66;
+        /* Operator */
+        --chroma-o: #54b1c7;
+        /* OperatorWord */
+        --chroma-ow: #b756ff;
+        /* Punctuation */
+        --chroma-p: #abb2bf;
+        /* Comment */
+        --chroma-c: #8a93a5;
+        /* CommentHashbang */
+        --chroma-ch: #8a93a5;
+        /* CommentMultiline */
+        --chroma-cm: #8a93a5;
+        /* CommentSingle */
+        --chroma-c1: #8a93a5;
+        /* CommentSpecial */
+        --chroma-cs: #8a93a5;
+        /* CommentPreproc */
+        --chroma-cp: #8a93a5;
+        /* CommentPreprocFile */
+        --chroma-cpf: #8a93a5;
+        /* GenericHeading */
+        --chroma-gh: #a2cbff;
+        /* GenericInserted */
+        --chroma-gi: #a6e22e;
+        /* GenericOutput */
+        --chroma-go: #a6e22e;
+        /* GenericPrompt */
+        --chroma-gp: #a6e22e;
+        /* GenericSubheading */
+        --chroma-gu: #a2cbff;
+        /* GenericTraceback */
+        --chroma-gt: #a2cbff;
+    }
+    #page {
+        /* PreWrapper */
+        --chroma-bg: none;
+        --chroma-fg: black;
+        /* LineNumbersTable */
+        --chroma-lnt: #7f7f7f;
+        /* LineNumbers */
+        --chroma-ln: #7f7f7f;
+        /* Keyword */
+        --chroma-k: #000000;
+        /* KeywordConstant */
+        --chroma-kc: #000000;
+        /* KeywordDeclaration */
+        --chroma-kd: #000000;
+        /* KeywordNamespace */
+        --chroma-kn: #000000;
+        /* KeywordPseudo */
+        --chroma-kp: #000000;
+        /* KeywordReserved */
+        --chroma-kr: #000000;
+        /* KeywordType */
+        --chroma-kt: #445588;
+        /* NameAttribute */
+        --chroma-na: #008080;
+        /* NameBuiltin */
+        --chroma-nb: #0086b3;
+        /* NameBuiltinPseudo */
+        --chroma-bp: #999999;
+        /* NameClass */
+        --chroma-nc: #445588;
+        /* NameConstant */
+        --chroma-no: #008080;
+        /* NameDecorator */
+        --chroma-nd: #3c5d5d;
+        /* NameEntity */
+        --chroma-ni: #800080;
+        /* NameException */
+        --chroma-ne: #990000;
+        /* NameFunction */
+        --chroma-nf: #990000;
+        /* NameLabel */
+        --chroma-nl: #990000;
+        /* NameNamespace */
+        --chroma-nn: #555555;
+        /* NameTag */
+        --chroma-nt: #000080;
+        /* NameVariable */
+        --chroma-nv: #008080;
+        /* NameVariableClass */
+        --chroma-vc: #008080;
+        /* NameVariableGlobal */
+        --chroma-vg: #008080;
+        /* NameVariableInstance */
+        --chroma-vi: #008080;
+        /* LiteralString */
+        --chroma-s: #dd1144;
+        /* LiteralStringAffix */
+        --chroma-sa: #dd1144;
+        /* LiteralStringBacktick */
+        --chroma-sb: #dd1144;
+        /* LiteralStringChar */
+        --chroma-sc: #dd1144;
+        /* LiteralStringDelimiter */
+        --chroma-dl: #dd1144;
+        /* LiteralStringDoc */
+        --chroma-sd: #dd1144;
+        /* LiteralStringDouble */
+        --chroma-s2: #dd1144;
+        /* LiteralStringEscape */
+        --chroma-se: #dd1144;
+        /* LiteralStringHeredoc */
+        --chroma-sh: #dd1144;
+        /* LiteralStringInterpol */
+        --chroma-si: #dd1144;
+        /* LiteralStringOther */
+        --chroma-sx: #dd1144;
+        /* LiteralStringRegex */
+        --chroma-sr: #009926;
+        /* LiteralStringSingle */
+        --chroma-s1: #dd1144;
+        /* LiteralStringSymbol */
+        --chroma-ss: #990073;
+        /* LiteralNumber */
+        --chroma-m: #009999;
+        /* LiteralNumberBin */
+        --chroma-mb: #009999;
+        /* LiteralNumberFloat */
+        --chroma-mf: #009999;
+        /* LiteralNumberHex */
+        --chroma-mh: #009999;
+        /* LiteralNumberInteger */
+        --chroma-mi: #009999;
+        /* LiteralNumberIntegerLong */
+        --chroma-il: #009999;
+        /* LiteralNumberOct */
+        --chroma-mo: #009999;
+        /* Operator */
+        --chroma-o: #000000;
+        /* OperatorWord */
+        --chroma-ow: #000000;
+        /* Comment */
+        --chroma-c: #999988;
+        /* CommentHashbang */
+        --chroma-ch: #999988;
+        /* CommentMultiline */
+        --chroma-cm: #999988;
+        /* CommentSingle */
+        --chroma-c1: #999988;
+        /* CommentSpecial */
+        --chroma-cs: #999999;
+        /* CommentPreproc */
+        --chroma-cp: #999999;
+        /* CommentPreprocFile */
+        --chroma-cpf: #999999;
+        /* GenericDeleted */
+        --chroma-gd: #000000;
+        /* GenericEmph */
+        --chroma-ge: #000000;
+        /* GenericError */
+        --chroma-gr: #aa0000;
+        /* GenericHeading */
+        --chroma-gh: #999999;
+        /* GenericInserted */
+        --chroma-gi: #000000;
+        /* GenericOutput */
+        --chroma-go: #888888;
+        /* GenericPrompt */
+        --chroma-gp: #555555;
+        /* GenericSubheading */
+        --chroma-gu: #aaaaaa;
+        /* GenericTraceback */
+        --chroma-gt: #aa0000;
+        /* TextWhitespace */
+        --chroma-w: #bbbbbb
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    #page {
+        /* Background */
+        --chroma-fg: #b0c4de;
+        --chroma-bg: none;
+        /* LineNumbersTable */
+        --chroma-lnt: #58626f;
+        /* LineNumbers */
+        --chroma-ln: #58626f;
+        /* Keyword */
+        --chroma-k: #76a9f9;
+        /* KeywordConstant */
+        --chroma-kc: #e5c07b;
+        /* KeywordDeclaration */
+        --chroma-kd: #76a9f9;
+        /* KeywordNamespace */
+        --chroma-kn: #76a9f9;
+        /* KeywordPseudo */
+        --chroma-kp: #76a9f9;
+        /* KeywordReserved */
+        --chroma-kr: #76a9f9;
+        /* KeywordType */
+        --chroma-kt: #e5c07b;
+        /* Name */
+        --chroma-n: #aa89ea;
+        /* NameAttribute */
+        --chroma-na: #cebc3a;
+        /* NameBuiltin */
+        --chroma-nb: #e5c07b;
+        /* NameBuiltinPseudo */
+        --chroma-bp: #aa89ea;
+        /* NameClass */
+        --chroma-nc: #ca72ff;
+        /* NameConstant */
+        --chroma-no: #aa89ea;
+        /* NameDecorator */
+        --chroma-nd: #e5c07b;
+        /* NameEntity */
+        --chroma-ni: #bda26f;
+        /* NameException */
+        --chroma-ne: #fd7474;
+        /* NameFunction */
+        --chroma-nf: #00b1f7;
+        /* NameFunctionMagic */
+        --chroma-fm: #aa89ea;
+        /* NameLabel */
+        --chroma-nl: #f5a40d;
+        /* NameNamespace */
+        --chroma-nn: #ca72ff;
+        /* NameOther */
+        --chroma-nx: #aa89ea;
+        /* NameProperty */
+        --chroma-py: #cebc3a;
+        /* NameTag */
+        --chroma-nt: #76a9f9;
+        /* NameVariable */
+        --chroma-nv: #dcaeea;
+        /* NameVariableClass */
+        --chroma-vc: #dcaeea;
+        /* NameVariableGlobal */
+        --chroma-vg: #dcaeea;
+        /* NameVariableInstance */
+        --chroma-vi: #e06c75;
+        /* NameVariableMagic */
+        --chroma-vm: #dcaeea;
+        /* Literal */
+        --chroma-l: #98c379;
+        /* LiteralDate */
+        --chroma-ld: #98c379;
+        /* LiteralString */
+        --chroma-s: #98c379;
+        /* LiteralStringAffix */
+        --chroma-sa: #98c379;
+        /* LiteralStringBacktick */
+        --chroma-sb: #98c379;
+        /* LiteralStringChar */
+        --chroma-sc: #98c379;
+        /* LiteralStringDelimiter */
+        --chroma-dl: #98c379;
+        /* LiteralStringDoc */
+        --chroma-sd: #7e97c3;
+        /* LiteralStringDouble */
+        --chroma-s2: #63c381;
+        /* LiteralStringEscape */
+        --chroma-se: #d26464;
+        /* LiteralStringHeredoc */
+        --chroma-sh: #98c379;
+        /* LiteralStringInterpol */
+        --chroma-si: #98c379;
+        /* LiteralStringOther */
+        --chroma-sx: #70b33f;
+        /* LiteralStringRegex */
+        --chroma-sr: #56b6c2;
+        /* LiteralStringSingle */
+        --chroma-s1: #98c379;
+        /* LiteralStringSymbol */
+        --chroma-ss: #56b6c2;
+        /* LiteralNumber */
+        --chroma-m: #d19a66;
+        /* LiteralNumberBin */
+        --chroma-mb: #d19a66;
+        /* LiteralNumberFloat */
+        --chroma-mf: #d19a66;
+        /* LiteralNumberHex */
+        --chroma-mh: #d19a66;
+        /* LiteralNumberInteger */
+        --chroma-mi: #d19a66;
+        /* LiteralNumberIntegerLong */
+        --chroma-il: #d19a66;
+        /* LiteralNumberOct */
+        --chroma-mo: #d19a66;
+        /* Operator */
+        --chroma-o: #54b1c7;
+        /* OperatorWord */
+        --chroma-ow: #b756ff;
+        /* Punctuation */
+        --chroma-p: #abb2bf;
+        /* Comment */
+        --chroma-c: #8a93a5;
+        /* CommentHashbang */
+        --chroma-ch: #8a93a5;
+        /* CommentMultiline */
+        --chroma-cm: #8a93a5;
+        /* CommentSingle */
+        --chroma-c1: #8a93a5;
+        /* CommentSpecial */
+        --chroma-cs: #8a93a5;
+        /* CommentPreproc */
+        --chroma-cp: #8a93a5;
+        /* CommentPreprocFile */
+        --chroma-cpf: #8a93a5;
+        /* GenericHeading */
+        --chroma-gh: #a2cbff;
+        /* GenericInserted */
+        --chroma-gi: #a6e22e;
+        /* GenericOutput */
+        --chroma-go: #a6e22e;
+        /* GenericPrompt */
+        --chroma-gp: #a6e22e;
+        /* GenericSubheading */
+        --chroma-gu: #a2cbff;
+        /* GenericTraceback */
+        --chroma-gt: #a2cbff;
+    }
+    #theme-switch:checked ~ #page {
+        /* PreWrapper */
+        --chroma-bg: none;
+        --chroma-fg: black;
+        /* LineNumbersTable */
+        --chroma-lnt: #7f7f7f;
+        /* LineNumbers */
+        --chroma-ln: #7f7f7f;
+        /* Keyword */
+        --chroma-k: #000000;
+        /* KeywordConstant */
+        --chroma-kc: #000000;
+        /* KeywordDeclaration */
+        --chroma-kd: #000000;
+        /* KeywordNamespace */
+        --chroma-kn: #000000;
+        /* KeywordPseudo */
+        --chroma-kp: #000000;
+        /* KeywordReserved */
+        --chroma-kr: #000000;
+        /* KeywordType */
+        --chroma-kt: #445588;
+        /* NameAttribute */
+        --chroma-na: #008080;
+        /* NameBuiltin */
+        --chroma-nb: #0086b3;
+        /* NameBuiltinPseudo */
+        --chroma-bp: #999999;
+        /* NameClass */
+        --chroma-nc: #445588;
+        /* NameConstant */
+        --chroma-no: #008080;
+        /* NameDecorator */
+        --chroma-nd: #3c5d5d;
+        /* NameEntity */
+        --chroma-ni: #800080;
+        /* NameException */
+        --chroma-ne: #990000;
+        /* NameFunction */
+        --chroma-nf: #990000;
+        /* NameLabel */
+        --chroma-nl: #990000;
+        /* NameNamespace */
+        --chroma-nn: #555555;
+        /* NameTag */
+        --chroma-nt: #000080;
+        /* NameVariable */
+        --chroma-nv: #008080;
+        /* NameVariableClass */
+        --chroma-vc: #008080;
+        /* NameVariableGlobal */
+        --chroma-vg: #008080;
+        /* NameVariableInstance */
+        --chroma-vi: #008080;
+        /* LiteralString */
+        --chroma-s: #dd1144;
+        /* LiteralStringAffix */
+        --chroma-sa: #dd1144;
+        /* LiteralStringBacktick */
+        --chroma-sb: #dd1144;
+        /* LiteralStringChar */
+        --chroma-sc: #dd1144;
+        /* LiteralStringDelimiter */
+        --chroma-dl: #dd1144;
+        /* LiteralStringDoc */
+        --chroma-sd: #dd1144;
+        /* LiteralStringDouble */
+        --chroma-s2: #dd1144;
+        /* LiteralStringEscape */
+        --chroma-se: #dd1144;
+        /* LiteralStringHeredoc */
+        --chroma-sh: #dd1144;
+        /* LiteralStringInterpol */
+        --chroma-si: #dd1144;
+        /* LiteralStringOther */
+        --chroma-sx: #dd1144;
+        /* LiteralStringRegex */
+        --chroma-sr: #009926;
+        /* LiteralStringSingle */
+        --chroma-s1: #dd1144;
+        /* LiteralStringSymbol */
+        --chroma-ss: #990073;
+        /* LiteralNumber */
+        --chroma-m: #009999;
+        /* LiteralNumberBin */
+        --chroma-mb: #009999;
+        /* LiteralNumberFloat */
+        --chroma-mf: #009999;
+        /* LiteralNumberHex */
+        --chroma-mh: #009999;
+        /* LiteralNumberInteger */
+        --chroma-mi: #009999;
+        /* LiteralNumberIntegerLong */
+        --chroma-il: #009999;
+        /* LiteralNumberOct */
+        --chroma-mo: #009999;
+        /* Operator */
+        --chroma-o: #000000;
+        /* OperatorWord */
+        --chroma-ow: #000000;
+        /* Comment */
+        --chroma-c: #999988;
+        /* CommentHashbang */
+        --chroma-ch: #999988;
+        /* CommentMultiline */
+        --chroma-cm: #999988;
+        /* CommentSingle */
+        --chroma-c1: #999988;
+        /* CommentSpecial */
+        --chroma-cs: #999999;
+        /* CommentPreproc */
+        --chroma-cp: #999999;
+        /* CommentPreprocFile */
+        --chroma-cpf: #999999;
+        /* GenericDeleted */
+        --chroma-gd: #000000;
+        /* GenericEmph */
+        --chroma-ge: #000000;
+        /* GenericError */
+        --chroma-gr: #aa0000;
+        /* GenericHeading */
+        --chroma-gh: #999999;
+        /* GenericInserted */
+        --chroma-gi: #000000;
+        /* GenericOutput */
+        --chroma-go: #888888;
+        /* GenericPrompt */
+        --chroma-gp: #555555;
+        /* GenericSubheading */
+        --chroma-gu: #aaaaaa;
+        /* GenericTraceback */
+        --chroma-gt: #aa0000;
+        /* TextWhitespace */
+        --chroma-w: #bbbbbb
+    }
+}
+
+/* Background */
+.bg {
+    color: var(--chrome-bg);
+}
+
+/* PreWrapper */
+.chroma {
+    color: var(--chroma-fg);
+}
+
+/* LineNumbersTable */
+.chroma .lnt {
+    color: var(--chroma-lnt);
+}
+
+/* LineNumbers */
+.chroma .ln {
+    color: var(--chroma-ln);
+}
+
+/* Keyword */
+.chroma .k {
+    color: var(--chroma-k);
+}
+
+/* KeywordConstant */
+.chroma .kc {
+    color: var(--chroma-kc);
+}
+
+/* KeywordDeclaration */
+.chroma .kd {
+    color: var(--chroma-kd);
+}
+
+/* KeywordNamespace */
+.chroma .kn {
+    color: var(--chroma-kn);
+}
+
+/* KeywordPseudo */
+.chroma .kp {
+    color: var(--chroma-kp);
+}
+
+/* KeywordReserved */
+.chroma .kr {
+    color: var(--chroma-kr);
+}
+
+/* KeywordType */
+.chroma .kt {
+    color: var(--chroma-kt);
+}
+
+/* Name */
+.chroma .n {
+    color: var(--chroma-n);
+}
+
+/* NameAttribute */
+.chroma .na {
+    color: var(--chroma-na);
+}
+
+/* NameBuiltin */
+.chroma .nb {
+    color: var(--chroma-nb);
+}
+
+/* NameBuiltinPseudo */
+.chroma .bp {
+    color: var(--chroma-bp);
+}
+
+/* NameClass */
+.chroma .nc {
+    color: var(--chroma-nc);
+}
+
+/* NameConstant */
+.chroma .no {
+    color: var(--chroma-no);
+}
+
+/* NameDecorator */
+.chroma .nd {
+    color: var(--chroma-nd);
+}
+
+/* NameEntity */
+.chroma .ni {
+    color: var(--chroma-ni);
+}
+
+/* NameException */
+.chroma .ne {
+    color: var(--chroma-ne);
+}
+
+/* NameFunction */
+.chroma .nf {
+    color: var(--chroma-nf);
+}
+
+/* NameFunctionMagic */
+.chroma .fm {
+    color: var(--chroma-fm);
+}
+
+/* NameLabel */
+.chroma .nl {
+    color: var(--chroma-nl);
+}
+
+/* NameNamespace */
+.chroma .nn {
+    color: var(--chroma-nn);
+}
+
+/* NameOther */
+.chroma .nx {
+    color: var(--chroma-nx);
+}
+
+/* NameProperty */
+.chroma .py {
+    color: var(--chroma-py);
+}
+
+/* NameTag */
+.chroma .nt {
+    color: var(--chroma-nt);
+}
+
+/* NameVariable */
+.chroma .nv {
+    color: var(--chroma-nv);
+}
+
+/* NameVariableClass */
+.chroma .vc {
+    color: var(--chroma-vc);
+}
+
+/* NameVariableGlobal */
+.chroma .vg {
+    color: var(--chroma-vg);
+}
+
+/* NameVariableInstance */
+.chroma .vi {
+    color: var(--chroma-vi);
+}
+
+/* NameVariableMagic */
+.chroma .vm {
+    color: var(--chroma-vm);
+}
+
+/* Literal */
+.chroma .l {
+    color: var(--chroma-l);
+}
+
+/* LiteralDate */
+.chroma .ld {
+    color: var(--chroma-ld);
+}
+
+/* LiteralString */
+.chroma .s {
+    color: var(--chroma-s);
+}
+
+/* LiteralStringAffix */
+.chroma .sa {
+    color: var(--chroma-sa);
+}
+
+/* LiteralStringBacktick */
+.chroma .sb {
+    color: var(--chroma-sb);
+}
+
+/* LiteralStringChar */
+.chroma .sc {
+    color: var(--chroma-sc);
+}
+
+/* LiteralStringDelimiter */
+.chroma .dl {
+    color: var(--chroma-dl);
+}
+
+/* LiteralStringDoc */
+.chroma .sd {
+    color: var(--chroma-sd);
+}
+
+/* LiteralStringDouble */
+.chroma .s2 {
+    color: var(--chroma-s2);
+}
+
+/* LiteralStringEscape */
+.chroma .se {
+    color: var(--chroma-se);
+}
+
+/* LiteralStringHeredoc */
+.chroma .sh {
+    color: var(--chroma-sh);
+}
+
+/* LiteralStringInterpol */
+.chroma .si {
+    color: var(--chroma-si);
+}
+
+/* LiteralStringOther */
+.chroma .sx {
+    color: var(--chroma-sx);
+}
+
+/* LiteralStringRegex */
+.chroma .sr {
+    color: var(--chroma-sr);
+}
+
+/* LiteralStringSingle */
+.chroma .s1 {
+    color: var(--chroma-s1);
+}
+
+/* LiteralStringSymbol */
+.chroma .ss {
+    color: var(--chroma-ss);
+}
+
+/* LiteralNumber */
+.chroma .m {
+    color: var(--chroma-m);
+}
+
+/* LiteralNumberBin */
+.chroma .mb {
+    color: var(--chroma-mb);
+}
+
+/* LiteralNumberFloat */
+.chroma .mf {
+    color: var(--chroma-mf);
+}
+
+/* LiteralNumberHex */
+.chroma .mh {
+    color: var(--chroma-mh);
+}
+
+/* LiteralNumberInteger */
+.chroma .mi {
+    color: var(--chroma-mi);
+}
+
+/* LiteralNumberIntegerLong */
+.chroma .il {
+    color: var(--chroma-il);
+}
+
+/* LiteralNumberOct */
+.chroma .mo {
+    color: var(--chroma-mo);
+}
+
+/* Operator */
+.chroma .o {
+    color: var(--chroma-o);
+}
+
+/* OperatorWord */
+.chroma .ow {
+    color: var(--chroma-ow);
+}
+
+/* Punctuation */
+.chroma .p {
+    color: var(--chroma-p);
+}
+
+/* Comment */
+.chroma .c {
+    color: var(--chroma-c);
+}
+
+/* CommentHashbang */
+.chroma .ch {
+    color: var(--chroma-ch);
+}
+
+/* CommentMultiline */
+.chroma .cm {
+    color: var(--chroma-cm);
+}
+
+/* CommentSingle */
+.chroma .c1 {
+    color: var(--chroma-c1);
+}
+
+/* CommentSpecial */
+.chroma .cs {
+    color: var(--chroma-cs);
+}
+
+/* CommentPreproc */
+.chroma .cp {
+    color: var(--chroma-cp);
+}
+
+/* CommentPreprocFile */
+.chroma .cpf {
+    color: var(--chroma-cpf);
+}
+
+/* GenericHeading */
+.chroma .gh {
+    color: var(--chroma-gh);
+}
+
+/* GenericInserted */
+.chroma .gi {
+    color: var(--chroma-gi);
+}
+
+/* GenericOutput */
+.chroma .go {
+    color: var(--chroma-go);
+}
+
+/* GenericPrompt */
+.chroma .gp {
+    color: var(--chroma-gp);
+}
+
+/* GenericSubheading */
+.chroma .gu {
+    color: var(--chroma-gu);
+}
+
+/* GenericTraceback */
+.chroma .gt {
+    color: var(--chroma-gt);
+}

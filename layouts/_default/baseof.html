@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+{{ partial "head.html" . }}
+
+<body>
+    <input type="checkbox" id="theme-switch">
+    <div id="page">
+	    <label for="theme-switch" id="switch-label"></label>
+        <div id="container">
+            {{ partial "nav.html" . }}
+            {{ partial "header.html" . }}
+            <main id="main">
+                {{ block "main" . }}{{ end }}
+            </main>
+           {{ partial "script.html" . }}
+           {{ partial "footer.html" . }}
+        </div>
+    </div>
+</body>
+
+</html>
