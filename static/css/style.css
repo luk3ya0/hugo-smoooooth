@@ -546,3 +546,7 @@ div.org-src-container {
   left: 1.2px !important;
   border-left: 1px solid var(--back-medium);
 }
+
+ul {
+    padding: 1em !important;
+}
