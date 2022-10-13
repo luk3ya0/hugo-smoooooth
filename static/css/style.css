@@ -30,7 +30,7 @@ hr {
 }
 
 pre {
-    font-family: monospace, monospace;
+    font-family: "Fira Code", monospace;
     font-size: .8em;
 }
 
@@ -41,7 +41,7 @@ b {
 code,
 kbd,
 samp {
-    font-family: monospace, monospace;
+    font-family: "Fira Code", monospace;
     font-size: 1em;
 }
 
@@ -547,6 +547,6 @@ div.org-src-container {
   border-left: 1px solid var(--back-medium);
 }
 
-ul {
+li, ul {
     padding: 1em !important;
 }
