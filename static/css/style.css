@@ -530,7 +530,7 @@ details.code:not([open]) summary {
 
 div.org-src-container {
     position: relative;
-    left: 1.2px !important;
+    left: 6px !important;
     border-left: 1px solid var(--back-medium);
 }
 
