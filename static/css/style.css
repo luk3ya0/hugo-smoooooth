@@ -304,7 +304,7 @@ p {
 div#container {
     height: auto;
     background-color: transparent !important;
-    max-width: 1080px;
+    max-width: 960px;
     margin: 0 auto;
 }
 
@@ -534,7 +534,12 @@ div.org-src-container {
     border-left: 1px solid var(--back-medium);
 }
 
-ul, ol {
+ol {
     margin: 1em 0 1em 1em !important;
+    padding: 0 0 0 1em;
+}
+
+ul {
+    margin: 1em 0 1em 0 !important;
     padding: 0 0 0 1em;
 }
