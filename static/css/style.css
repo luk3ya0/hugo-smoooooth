@@ -304,6 +304,7 @@ img {
     }
 
     #switch-label::after {
+        display: none;
         position: fixed;
         top: calc(1vh + 3px);
         left: calc(1vw + 30px);
