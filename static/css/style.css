@@ -376,8 +376,12 @@ pre, pre code  {
 
 pre code {
     display: block;
-    padding: 0.8em 1.5em;
+    padding: 0.8em 0em;
     white-space: pre;
+    line-height: 1.7;
+}
+
+pre code.language-text {
     line-height: 1.3;
 }
 
