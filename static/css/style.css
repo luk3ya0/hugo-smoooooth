@@ -259,7 +259,7 @@ summary {
 }
 
 p {
-    line-height: 2;
+    line-height: 1.5;
 }
 
 /* --------------------------------------------------------------------------------------------------------------- div#page */
@@ -376,13 +376,13 @@ pre, pre code  {
 
 pre code {
     display: block;
-    padding: 0.8em 0.3em;
+    padding: 0.8em 0.8em;
     white-space: pre;
     line-height: 1.7;
 }
 
 pre code.language-text {
-    padding: 0.8em 0.3em;
+    padding: 0.8em 0.8em;
     line-height: 1.5;
 }
 
