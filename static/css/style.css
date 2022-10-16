@@ -270,7 +270,7 @@ div#container {
 }
 
 img {
-    max-width: 960px;
+    max-width: 100%;
 }
 
 @media (max-width: 1440px) {
@@ -317,7 +317,7 @@ img {
         margin: 0 1em !important;
     }
     img {
-        max-width: 720px;
+        max-width: 100%;
     }
 }
 
