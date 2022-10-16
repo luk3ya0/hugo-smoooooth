@@ -273,6 +273,12 @@ img {
     max-width: 960px;
 }
 
+@media (max-width: 1440px) {
+    #TableOfContents {
+        display: none;
+    }
+}
+
 @media (max-width: 1080px) {
     body {
         font-size: .85em;
@@ -380,7 +386,7 @@ pre code {
     line-height: 1.7;
 }
 
-pre code.language-text {
+pre code.language-text, pre code-language-shell {
     padding: 0.8em 0.8em;
     line-height: 1.3;
 }
