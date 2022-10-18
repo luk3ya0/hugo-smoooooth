@@ -447,7 +447,7 @@ span.code-bottom {
 
 details.code summary {
     position: relative;
-    top: -0.5em;
+    top: 0;
     left: -0.75em;
     padding-left: 1.2em;
     padding-bottom: 4px;
