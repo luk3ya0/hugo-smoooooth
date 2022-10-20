@@ -288,19 +288,13 @@ img {
         left: -0.65em !important;
     }
     #switch-label {
-        left: 1vw;
-        right: auto;
-        bottom: auto;
-        top: 1vh;
+        position: fixed;
+        bottom: 1rem;
+        right: 1rem;
+        font-size: 1.3em;
     }
-
     #switch-label::after {
         display: none;
-        position: fixed;
-        top: calc(1vh + 3px);
-        left: calc(1vw + 30px);
-        right: auto;
-        bottom: auto;
     }
     #page {
         min-height: 100%;
