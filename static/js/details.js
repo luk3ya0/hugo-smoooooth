@@ -111,6 +111,6 @@ class Accordion {
   }
 }
 
-document.querySelectorAll('details.code').forEach((el) => {
+document.querySelectorAll('details').forEach((el) => {
   new Accordion(el);
 });

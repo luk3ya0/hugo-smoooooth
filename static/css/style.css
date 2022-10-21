@@ -330,7 +330,7 @@ h3,
 h4,
 h5,
 h6 {
-    margin: 1em 0 1em 0 !important;
+    /* margin: 1em 0 1em 0 !important; */
     font-size: 1em !important;
     font-family: "Fira Code", serif;
     font-weight: normal;
@@ -404,7 +404,7 @@ details.code {
     display: block;
 }
 
-details.code>summary {
+details > summary {
     list-style: none;
 }
 summary::-webkit-details-marker {

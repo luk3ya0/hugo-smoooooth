@@ -31,7 +31,9 @@
         {{ $parts := split $pp "</h2>"}}
         <summary>
         {{ printf "<h2 %s</h2>\n" (index $parts 0) | safeHTML }}</summary>
-        {{ printf "%s\n" (index $parts 1) | safeHTML }}
+        <div class="highlight">
+            {{ printf "%s\n" (index $parts 1) | safeHTML }}
+        </div>
     </details>
     {{ end }}
 {{end}}
