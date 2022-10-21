@@ -71,11 +71,11 @@ button:-moz-focusring {
     outline: 1px dotted ButtonText;
 }
 
-details {
+details.code {
     display: block;
 }
 
-summary {
+details.code summary {
     display: list-item;
 }
 
@@ -398,13 +398,13 @@ pre code::-webkit-scrollbar {
     display: none;
 }
 
-details {
+details.code {
     position: relative;
     left: 0.3em;
     display: block;
 }
 
-details>summary {
+details.code>summary {
     list-style: none;
 }
 summary::-webkit-details-marker {
@@ -414,7 +414,7 @@ summary::-webkit-details-marker {
 summary::before{
     content: '► ';
 }
-details[open] summary::before{
+details.code[open] summary::before{
     content: "▼ ";
     position: relative;
     top: -0.5em;
@@ -495,7 +495,7 @@ details.code:not([open]) summary {
     margin-bottom: -5px;
 }
 
-details[open] {
+details.code[open] {
     border-left: 1px solid var(--back-medium);
 }
 
