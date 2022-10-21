@@ -369,7 +369,7 @@ pre, pre code  {
 
 pre code {
     display: block;
-    padding: 0.8em 0.8em 0 0;
+    padding: 0.8em 0.8em 0 0.8em;
     white-space: pre;
     line-height: 1.7;
     font-size: 14px; /* TODO cause the weird white line in the bottom */
