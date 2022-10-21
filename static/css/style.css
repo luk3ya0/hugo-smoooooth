@@ -20,12 +20,13 @@ html, body {
     font-family: "Fira Code";
     font-size: 1em;
     height: 100%;
+    scroll-behavior: smooth;
     -webkit-text-size-adjust: 100%;
 }
 
 pre {
     font-family: "Fira Code", monospace;
-    font-size: .8em;
+    font-size: .87em;
 }
 
 sub,
@@ -337,7 +338,7 @@ h3,
 h4,
 h5,
 h6 {
-    margin: 1em 0 1em 0 !important;
+    margin: 1em 0 1em 0;
     font-size: 1em !important;
     font-family: "Fira Code", serif;
     font-weight: normal;
@@ -708,23 +709,48 @@ center {
 
 details.expand summary {
     list-style: none;
-    margin-bottom: 1em;
+    /* margin-bottom: 1em; */
+}
+
+details.expand > summary + div.highlight {
+    margin-top: 1em !important;
+    margin-bottom: 1em !important;
 }
 
 details.expand > summary::before {
     display: none;
 }
 
-summary + h2 {
-    display: inline;
+details.expand > summary > h2 {
+    background-position: center;
+    transition: background 0.8s;
+    /* display: inline; */
+    margin-top: 0;
+    margin-bottom: 0;
 }
-details summary h2::after {
+details.expand > summary h2::after {
     content: "...";
 }
-details[open] summary h2::after {
+details.expand[open] > summary h2::after {
     content: "";
 }
 
-details.expand > summary > h2 {
-    margin-bottom: 0 !important;
+@-webkit-keyframes ripple {
+    0% {
+        width: 0;
+        height: 0;
+        opacity: .5;
+    }
+    100% {
+        width: 150px;
+        height: 150px;
+        opacity: 0;
+    }
+}
+details.expand > summary:not(:active):before {
+    animation: ripple 0.4s;
+    transition: visibility .4s step-end;
+}
+details.expand > summary:active:before {
+    visibility: visible;
 }

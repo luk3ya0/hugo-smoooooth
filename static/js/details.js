@@ -36,10 +36,15 @@ class Accordion {
     this.isClosing = true;
     
     // Store the current height of the element
-    const startHeightNum = this.el.offsetHeight;
-    const startHeight = `${this.el.offsetHeight}px`;
+    var startHeightNum = this.el.offsetHeight;
+    var startHeight = `${this.el.offsetHeight}px`;
     // Calculate the height of the summary
-    const endHeight = `${this.summary.offsetHeight + 15}px`;
+    var endHeight = "";
+    if (this.el.class == "expand") {
+      endHeight = `${this.summary.offsetHeight + 30}px`;
+    } else {
+      endHeight = `${this.summary.offsetHeight + 15}px`;
+    }
 
     // If there is already an animation running
     if (this.animation) {
@@ -47,17 +52,40 @@ class Accordion {
       this.animation.cancel();
     }
 
-    var duration = 400;
+    if (startHeightNum > window.innerHeight) {
+      // Start a WAAPI animation
+      this.animation = this.el.animate({
+        // Set the keyframes from the startHeight to endHeight
+        height: [startHeight, `${window.innerHeight}px`]
+      }, {
+        duration: 0,
+        easing: 'ease-out'
+      });
+      var duration = 400;
 
-    // Start a WAAPI animation
-    this.animation = this.el.animate({
-      // Set the keyframes from the startHeight to endHeight
-      height: [startHeight, endHeight]
-    }, {
-      duration: duration,
-      easing: 'ease-out'
-    });
-    
+      // Start a WAAPI animation
+      this.animation = this.el.animate({
+        // Set the keyframes from the startHeight to endHeight
+        height: [`${window.innerHeight}px`, endHeight]
+      }, {
+        duration: duration,
+        easing: 'ease-out'
+      });
+    } else {
+
+      var duration = 400;
+
+      // Start a WAAPI animation
+      this.animation = this.el.animate({
+        // Set the keyframes from the startHeight to endHeight
+        height: [startHeight, endHeight]
+      }, {
+        duration: duration,
+        easing: 'ease-out'
+      });
+
+    }
+
     // When the animation is complete, call onAnimationFinish()
     this.animation.onfinish = () => this.onAnimationFinish(false);
     // If the animation is cancelled, isClosing variable is set to false
@@ -77,26 +105,38 @@ class Accordion {
     // Set the element as "being expanding"
     this.isExpanding = true;
     // Get the current fixed height of the element
-    const startHeight = `${this.el.offsetHeight}px`;
+    var startHeight = `${this.el.offsetHeight}px`;
     // Calculate the open height of the element (summary height + highlight height)
-    const endHeightNum = this.summary.offsetHeight + this.highlight.offsetHeight;
-    const endHeight = `${this.summary.offsetHeight + this.highlight.offsetHeight + 15}px`;
-    console.log(endHeight);
-    
+    var endHeightNum = this.summary.offsetHeight + this.highlight.offsetHeight;
+    var endHeight = `${this.summary.offsetHeight + this.highlight.offsetHeight + 15}px`;
+
     // If there is already an animation running
     if (this.animation) {
       // Cancel the current animation
       this.animation.cancel();
     }
 
-    // Start a WAAPI animation
-    this.animation = this.el.animate({
-      // Set the keyframes from the startHeight to endHeight
-      height: [startHeight, endHeight]
-    }, {
-      duration: 500,
-      easing: 'ease-out'
-    });
+    if (endHeightNum > window.innerHeight) {
+      // Start a WAAPI animation
+      this.animation = this.el.animate({
+        // Set the keyframes from the startHeight to endHeight
+        height: [startHeight, endHeight]
+      }, {
+        duration: 500 + (endHeightNum - window.innerHeight) / 100 * 50,
+        easing: 'ease-out'
+      });
+    } else {
+      // Start a WAAPI animation
+      this.animation = this.el.animate({
+        // Set the keyframes from the startHeight to endHeight
+        height: [startHeight, endHeight]
+      }, {
+        duration: 500,
+        easing: 'ease-out'
+      });
+
+    }
+
     // When the animation is complete, call onAnimationFinish()
     this.animation.onfinish = () => this.onAnimationFinish(true);
     // If the animation is cancelled, isExpanding variable is set to false
@@ -116,6 +156,6 @@ class Accordion {
   }
 }
 
-document.querySelectorAll('details.code').forEach((el) => {
+document.querySelectorAll('details').forEach((el) => {
   new Accordion(el);
 });
