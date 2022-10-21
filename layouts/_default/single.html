@@ -29,5 +29,26 @@
     {{ .TableOfContents }}
 </aside>
 
+<script>
+const openDetailsIfAnchorHidden = evt => {
+  const targetDIV = document.querySelector(evt.target.getAttribute("href"));
+  targetDIV.closest("details").open = true;
+  if ( !! targetDIV.offsetHeight || targetDIV.getClientRects().length ) return;
+  const topPos = targetDIV.getBoundingClientRect().top + window.pageYOffset;
+  console.log(topPos);
+  window.scrollTo({
+    top: topPos,
+    behavior: 'smooth'
+  });
+
+}
+
+
+document.querySelectorAll("#TableOfContents a").forEach(
+   el => el.addEventListener("click", openDetailsIfAnchorHidden )
+);
+</script>
+
+
 {{ end }}
 

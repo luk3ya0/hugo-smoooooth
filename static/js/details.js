@@ -25,7 +25,7 @@ class Accordion {
     // Check if the element is being closed or is already closed
     if (this.isClosing || !this.el.open) {
       this.open();
-    // Check if the element is being openned or is already open
+      // Check if the element is being openned or is already open
     } else if (this.isExpanding || this.el.open) {
       this.shrink();
     }
