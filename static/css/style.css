@@ -381,7 +381,7 @@ pre code {
     padding: 0em 0.8em 0.8em 0.8em;
     white-space: pre;
     line-height: 1.7;
-    font-size: 12px; /* TODO cause the weird white line in the bottom */
+    font-size: 14px; /* TODO cause the weird white line in the bottom */
 }
 
 pre code.language-text, pre code-language-shell {
@@ -721,8 +721,10 @@ details.expand > summary::before {
     display: none;
 }
 
-details.expand > summary > h2 {
-    background-position: center;
+details.expand > summary h2 {
+    position: relative;
+    float: left;
+    background-position: left;
     transition: background 0.8s;
     /* display: inline; */
     margin-top: 0;
@@ -735,22 +737,29 @@ details.expand[open] > summary h2::after {
     content: "";
 }
 
-@-webkit-keyframes ripple {
-    0% {
-        width: 0;
-        height: 0;
-        opacity: .5;
-    }
-    100% {
-        width: 150px;
-        height: 150px;
-        opacity: 0;
-    }
+/* Ripple effect */
+.ripple {
+    background-position: left;
+    transition: background 0.8s;
 }
-details.expand > summary:not(:active):before {
-    animation: ripple 0.4s;
-    transition: visibility .4s step-end;
+.ripple:hover {
+    background: var(--back-light) radial-gradient(circle, transparent 1%, var(--back-light) 1%) center/15000%;
 }
-details.expand > summary:active:before {
-    visibility: visible;
+.ripple:active {
+    background-color: var(--text-gray);
+    background-size: 100%;
+    transition: background 0s;
+}
+
+/* Button style */
+button {
+    margin-left: 0;
+    padding-left: 0;
+    height: 2em;
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    color: var(--text-dark);
+    background-color: var(--back-light);
+    outline: none;
 }

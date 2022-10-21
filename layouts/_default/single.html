@@ -14,8 +14,8 @@
     {{ if and (ne $pp "") (gt $index 0) }}
     <details class="expand">
         {{ $parts := split $pp "</h2>"}}
-        <summary>
-        {{ printf "<h2 %s</h2>\n" (index $parts 0) | safeHTML }}</summary>
+        <summary><button class="ripple">
+        {{ printf "<h2 %s</h2>\n" (index $parts 0) | safeHTML }}</button></summary>
         <div class="highlight">
             {{ printf "%s\n" (index $parts 1) | safeHTML }}
         </div>
