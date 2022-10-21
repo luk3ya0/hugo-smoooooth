@@ -36,9 +36,12 @@ class Accordion {
     this.isClosing = true;
     
     // Store the current height of the element
+    const startHeightNum = this.el.offsetHeight;
     const startHeight = `${this.el.offsetHeight}px`;
     // Calculate the height of the summary
-    const endHeight = `${this.summary.offsetHeight}px`;
+    const endHeight = `${this.summary.offsetHeight + 10}px`;
+    console.log(endHeight);
+    // const endHeight = "18px";
     
     // If there is already an animation running
     if (this.animation) {
@@ -51,7 +54,7 @@ class Accordion {
       // Set the keyframes from the startHeight to endHeight
       height: [startHeight, endHeight]
     }, {
-      duration: 400,
+      duration: 50 * (startHeightNum / 100),
       easing: 'ease-out'
     });
     
@@ -76,7 +79,9 @@ class Accordion {
     // Get the current fixed height of the element
     const startHeight = `${this.el.offsetHeight}px`;
     // Calculate the open height of the element (summary height + highlight height)
+    const endHeightNum = this.summary.offsetHeight + this.highlight.offsetHeight;
     const endHeight = `${this.summary.offsetHeight + this.highlight.offsetHeight}px`;
+    console.log(endHeight);
     
     // If there is already an animation running
     if (this.animation) {
@@ -89,7 +94,7 @@ class Accordion {
       // Set the keyframes from the startHeight to endHeight
       height: [startHeight, endHeight]
     }, {
-      duration: 400,
+      duration: 50 * (endHeightNum / 100),
       easing: 'ease-out'
     });
     // When the animation is complete, call onAnimationFinish()
