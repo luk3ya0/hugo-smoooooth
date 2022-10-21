@@ -41,7 +41,7 @@ class Accordion {
     // Calculate the height of the summary
     var endHeight = "";
     if (this.el.class == "expand") {
-      endHeight = `${this.summary.offsetHeight + 30}px`;
+      endHeight = `${this.summary.offsetHeight + 50}px`;
     } else {
       endHeight = `${this.summary.offsetHeight + 15}px`;
     }
@@ -108,7 +108,13 @@ class Accordion {
     var startHeight = `${this.el.offsetHeight}px`;
     // Calculate the open height of the element (summary height + highlight height)
     var endHeightNum = this.summary.offsetHeight + this.highlight.offsetHeight;
-    var endHeight = `${this.summary.offsetHeight + this.highlight.offsetHeight + 15}px`;
+    var endHeight = "";
+
+    if (this.el.class == "expand") {
+      endHeight = `${this.summary.offsetHeight + this.highlight.offsetHeight + 50}px`;
+    } else {
+      endHeight = `${this.summary.offsetHeight + this.highlight.offsetHeight + 15}px`;
+    }
 
     // If there is already an animation running
     if (this.animation) {
@@ -131,7 +137,7 @@ class Accordion {
         // Set the keyframes from the startHeight to endHeight
         height: [startHeight, endHeight]
       }, {
-        duration: 500,
+        duration: 400,
         easing: 'ease-out'
       });
 
