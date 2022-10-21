@@ -39,7 +39,7 @@ class Accordion {
     const startHeightNum = this.el.offsetHeight;
     const startHeight = `${this.el.offsetHeight}px`;
     // Calculate the height of the summary
-    const endHeight = `${this.summary.offsetHeight}px`;
+    const endHeight = `${this.summary.offsetHeight + 15}px`;
 
     // If there is already an animation running
     if (this.animation) {
@@ -80,7 +80,7 @@ class Accordion {
     const startHeight = `${this.el.offsetHeight}px`;
     // Calculate the open height of the element (summary height + highlight height)
     const endHeightNum = this.summary.offsetHeight + this.highlight.offsetHeight;
-    const endHeight = `${this.summary.offsetHeight + this.highlight.offsetHeight}px`;
+    const endHeight = `${this.summary.offsetHeight + this.highlight.offsetHeight + 15}px`;
     console.log(endHeight);
     
     // If there is already an animation running
