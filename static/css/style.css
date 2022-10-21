@@ -709,6 +709,7 @@ center {
 
 details.expand summary {
     list-style: none;
+    margin-bottom: 1em;
 }
 
 details.expand > summary::before {
