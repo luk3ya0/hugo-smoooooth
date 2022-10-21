@@ -43,7 +43,7 @@ class Accordion {
     if (this.el.class == "expand") {
       endHeight = `${this.summary.offsetHeight}px`;
     } else {
-      endHeight = `${this.summary.offsetHeight}px`;
+      endHeight = `${this.summary.offsetHeight + 15}px`;
     }
 
     // If there is already an animation running
@@ -113,7 +113,7 @@ class Accordion {
     if (this.el.class == "expand") {
       endHeight = `${this.summary.offsetHeight + this.highlight.offsetHeight}px`;
     } else {
-      endHeight = `${this.summary.offsetHeight + this.highlight.offsetHeight}px`;
+      endHeight = `${this.summary.offsetHeight + this.highlight.offsetHeight + 15}px`;
     }
 
     // If there is already an animation running
