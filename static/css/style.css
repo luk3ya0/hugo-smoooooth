@@ -404,10 +404,14 @@ details.code {
     display: block;
 }
 
+summary {
+    display: block;
+}
+
 details > summary {
     list-style: none;
 }
-summary::-webkit-details-marker {
+details summary::-webkit-details-marker {
     display: none
 }
 
