@@ -39,13 +39,7 @@ class Accordion {
     const startHeightNum = this.el.offsetHeight;
     const startHeight = `${this.el.offsetHeight}px`;
     // Calculate the height of the summary
-    var endHeight = "";
-    if (this.el.class == "expand") {
-      endHeight = `${this.summary.offsetHeight}px`;
-      console.log(endHeight);
-    } else {
-      endHeight = `${this.summary.offsetHeight}px`;
-    }
+    const endHeight = `${this.summary.offsetHeight}px`;
 
     // If there is already an animation running
     if (this.animation) {
