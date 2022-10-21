@@ -706,3 +706,25 @@ center {
 /* #TableOfContents  li::before { */
 /*     content: "" !important; */
 /* } */
+
+details.expand summary {
+    list-style: none;
+}
+
+details.expand > summary::before {
+    display: none;
+}
+
+summary + h2 {
+    display: inline;
+}
+details summary h2::after {
+    content: "...";
+}
+details[open] summary h2::after {
+    content: "";
+}
+
+details.expand > summary > h2 {
+    margin-bottom: 0 !important;
+}

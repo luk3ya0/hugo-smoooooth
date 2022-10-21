@@ -39,22 +39,28 @@ class Accordion {
     const startHeightNum = this.el.offsetHeight;
     const startHeight = `${this.el.offsetHeight}px`;
     // Calculate the height of the summary
-    const endHeight = `${this.summary.offsetHeight + 10}px`;
-    console.log(endHeight);
-    // const endHeight = "18px";
-    
+    var endHeight = "";
+    if (this.el.class == "expand") {
+      endHeight = `${this.summary.offsetHeight}px`;
+      console.log(endHeight);
+    } else {
+      endHeight = `${this.summary.offsetHeight}px`;
+    }
+
     // If there is already an animation running
     if (this.animation) {
       // Cancel the current animation
       this.animation.cancel();
     }
-    
+
+    var duration = 400;
+
     // Start a WAAPI animation
     this.animation = this.el.animate({
       // Set the keyframes from the startHeight to endHeight
       height: [startHeight, endHeight]
     }, {
-      duration: 50 * (startHeightNum / 100),
+      duration: duration,
       easing: 'ease-out'
     });
     
@@ -88,13 +94,13 @@ class Accordion {
       // Cancel the current animation
       this.animation.cancel();
     }
-    
+
     // Start a WAAPI animation
     this.animation = this.el.animate({
       // Set the keyframes from the startHeight to endHeight
       height: [startHeight, endHeight]
     }, {
-      duration: 50 * (endHeightNum / 100),
+      duration: 500,
       easing: 'ease-out'
     });
     // When the animation is complete, call onAnimationFinish()

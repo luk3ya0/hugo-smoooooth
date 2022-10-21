@@ -4,21 +4,6 @@
 {{ partial "metadata.html" . }}
 <br><br>
 
-<style>
-    summary::before {
-        content: "";
-    }
-    summary + h2 {
-        display: inline;
-    }
-    details summary h2::after {
-        content: "...";
-    }
-    details[open] summary h2::after {
-        content: "";
-    }
-</style>
-
 {{ $paragraphs := split .Content "<h2 " }}
 
 {{ range $index, $p := $paragraphs }}
@@ -27,7 +12,7 @@
         {{ printf "%s\n" $pp | safeHTML }}
     {{ end }}
     {{ if and (ne $pp "") (gt $index 0) }}
-    <details class="boxtext">
+    <details class="expand">
         {{ $parts := split $pp "</h2>"}}
         <summary>
         {{ printf "<h2 %s</h2>\n" (index $parts 0) | safeHTML }}</summary>
