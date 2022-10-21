@@ -1,0 +1,24 @@
+{{ $strs := split .Inner "\n" }}
+{{ $header := index $strs 1 }}
+{{ $rawH := strings.TrimLeft "#" $header }}
+{{ $level := sub (len $header) (len $rawH) }}
+{{ $anchor := replace (trim $rawH " " | lower) " " "-" }}
+<details class='expand'>
+    <style>
+        summary::before {
+            content: "";
+        }
+        summary + h{{ $level }} {
+            display: inline;
+        }
+        details summary h{{ $level }}::after {
+            content: "...";
+        }
+        details[open] summary h{{ $level }}::after {
+            content: "";
+        }
+    </style>
+    <summary>
+       {{ substr .Inner 0 (add (len $header) 1) | safeHTML }}</summary>
+    {{ substr .Inner (add (len $header) 1) | safeHTML}}
+</details>
