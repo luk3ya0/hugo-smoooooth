@@ -41,7 +41,7 @@ class Accordion {
     // Calculate the height of the summary
     var endHeight = "";
     if (this.el.class == "expand") {
-      endHeight = `${this.summary.offsetHeight - 300}px`;
+      endHeight = `${this.summary.offsetHeight}px`;
     } else {
       endHeight = `${this.summary.offsetHeight + 15}px`;
     }
@@ -59,7 +59,7 @@ class Accordion {
         height: [startHeight, `${window.innerHeight}px`]
       }, {
         duration: 0,
-        easing: 'ease-out'
+        easing: 'ease-in'
       });
       var duration = 400;
 
@@ -69,7 +69,7 @@ class Accordion {
         height: [`${window.innerHeight}px`, endHeight]
       }, {
         duration: duration,
-        easing: 'ease-out'
+        easing: 'ease-in'
       });
     } else {
 
@@ -81,7 +81,7 @@ class Accordion {
         height: [startHeight, endHeight]
       }, {
         duration: duration,
-        easing: 'ease-out'
+        easing: 'ease-in'
       });
 
     }
@@ -161,6 +161,7 @@ class Accordion {
     this.el.style.height = this.el.style.overflow = '';
   }
 }
+
 
 document.querySelectorAll('details').forEach((el) => {
   new Accordion(el);
