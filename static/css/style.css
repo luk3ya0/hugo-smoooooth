@@ -416,18 +416,6 @@ summary::-webkit-details-marker {
     display: none
 }
 
-details.code {
-    margin-top: 1em;
-    margin-bottom: 1em;
-    position: relative;
-}
-
-div.highlight details.code {
-    margin-top: .8em;
-    margin-bottom: 1em;
-    position: relative;
-}
-
 h4.lang {
     font-size: .8em !important;
     display: block;
@@ -463,6 +451,11 @@ details.code[open] {
     margin-bottom: 1em;
 }
 
+details.code:not([open]) {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
 details.code summary .name {
     font-size: 1em;
     color: var(--text-medium);
@@ -480,14 +473,6 @@ details.code[open] > summary > h4.lang.code-up::after {
 details.code summary::marker {
     color: var(--back-medium);
     font-size: 0.8em;
-}
-
-details.code[open] summary.named {
-    margin-bottom: -26px;
-}
-
-details.code:not([open]) summary {
-    margin-bottom: -5px;
 }
 
 .gutter {
