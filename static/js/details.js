@@ -41,7 +41,7 @@ class Accordion {
     // Calculate the height of the summary
     var endHeight = "";
     if (this.el.class == "expand") {
-      endHeight = `${this.summary.offsetHeight + 30}px`;
+      endHeight = `${this.summary.offsetHeight - 300}px`;
     } else {
       endHeight = `${this.summary.offsetHeight + 15}px`;
     }

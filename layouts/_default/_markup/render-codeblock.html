@@ -2,7 +2,7 @@
 {{ $lang  := .Attributes.lang  | default .Type }}
 {{ if transform.CanHighlight $lang }}
 <details class='code' open>
-    <summary><span class="code-up">{{ $lang }}</span></summary>
+    <summary class="ripple"><span class="code-up">{{ $lang }}</span></summary>
     <div class='gutter'>
         <button title='Copy to clipboard' onclick='copyPreToClipbord(this)'>⎘</button>
     </div>
@@ -13,7 +13,7 @@
 </details>
 {{else}}
 <details class='code' open>
-    <summary><span class="code-up">{{ $lang }}</span></summary>
+    <summary class="ripple"><span class="code-up">{{ $lang }}</span></summary>
     <div class='gutter'>
         <button title='Copy to clipboard' onclick='copyPreToClipbord(this)'>⎘</button>
     </div>
