@@ -762,3 +762,13 @@ details.expand[open] > summary h2::after {
   background-size: 100%;
   transition: background 0s;
 }
+
+details.code pre {
+    margin-bottom: 0 !important;
+    margin-top: 0 !important;
+}
+
+details.code div.highlight {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
