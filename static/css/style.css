@@ -532,13 +532,13 @@ div.org-src-container {
 }
 
 ol {
-    margin: 1em 0 1em 1em !important;
-    padding: 0 0 0 1em;
+    margin: 1em 0 1em 2.7em !important;
+    padding: 0;
 }
 
 ul {
-    margin: 1em 0 1em 0 !important;
-    padding: 0 0 0 1em;
+    margin: 1em 0 1em 1.7em !important;
+    padding: 0;
 }
 
 center {
