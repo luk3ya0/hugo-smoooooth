@@ -367,7 +367,7 @@ h5::before {
 
 /* ---------------------------------------------------------------------------------------------------------------- pre.chroma */
 pre, pre code  {
-    overflow-x: auto;
+    overflow-x: hidden;
     overflow-y: hidden;
     overflow:   scroll;
 }
