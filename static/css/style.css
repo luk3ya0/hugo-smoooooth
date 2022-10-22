@@ -16,6 +16,7 @@
 html, body {
     padding: 0;
     margin: 0;
+    overflow-x: hidden
     line-height: 1.15;
     font-family: "Fira Code", "PingFang SC", "Melno", "SF Mono";
     font-size: 1em;
@@ -507,18 +508,27 @@ div.org-src-container {
 }
 
 ol {
-    margin: 1em 0 1em 2.3em !important;
+    position: relative;
+    left: 1.9em;
+    margin: 1em 0;
     padding: 0;
 }
 
 ul {
-    margin: 1em 0 1em 1.3em !important;
+    position: relative;
+    left: 1em;
+    margin: 1em 0;
     padding: 0;
 }
 
 center {
     margin-top: 1em;
     margin-bottom: 1em;
+}
+
+center img {
+    max-width: 100%;
+    height: auto;
 }
 
 #TableOfContents {
