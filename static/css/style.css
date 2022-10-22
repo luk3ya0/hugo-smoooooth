@@ -283,23 +283,11 @@ img {
     #TableOfContents {
         display: none;
     }
-    details.code[open] summary::before{
-        content: "▼ ";
-        position: absolute;
-        left: 14px;
-        top: -0.5em;
-    }
 }
 
 @media (max-width: 1080px) {
     body {
         font-size: .85em;
-    }
-    details.code[open] summary::before{
-        content: "▼ ";
-        position: absolute;
-        left: 14px !important;
-        top: -0.5em;
     }
     #switch-label {
         position: fixed;
@@ -384,7 +372,7 @@ pre, pre code  {
 
 pre code {
     display: block;
-    padding: 0em 0.8em 0.8em 0.8em;
+    padding: .8em;
     white-space: pre;
     line-height: 1.7;
 }
@@ -412,8 +400,12 @@ pre code::-webkit-scrollbar {
 
 details.code {
     position: absolute;
-    left: 0.3em;
+    left: 0;
     display: block;
+}
+
+details.code > summary > h2::before {
+    content: "";
 }
 
 details.code > summary {
@@ -423,27 +415,24 @@ summary::-webkit-details-marker {
     display: none
 }
 
-summary::before{
-    content: '► ';
-}
-details.code[open] summary::before{
-    content: "▼ ";
-    position: absolute;
-    left: 15.5px;
-    top: -0.5em;
-}
-
 details.code {
     margin-top: 1em;
     margin-bottom: 1em;
     position: relative;
 }
 
-span.code-up, span.code-bottom {
-    font-size: 14px !important;
+h4.lang {
+    font-size: .8em !important;
+    display: block;
+    color: var(--code-foreground);
+    margin: 0 !important;
 }
 
-span.code-bottom {
+h4.lang::before {
+    content: "" !important;
+}
+
+.code-bottom {
     display: block;
     position: relative;
     bottom: 0;
@@ -453,16 +442,12 @@ span.code-bottom {
 details.code summary {
     position: relative;
     top: 0;
-    left: -0.75em;
-    padding-left: 1.2em;
     padding-bottom: 4px;
-    margin-left: -10px;
     z-index: 1;
     outline: none;
     font-family: "Fira Code", sans;
     font-weight: normal;
     font-style: normal;
-    font-size: 0.8em;
     line-height: 1.5;
     color: var(--text-light);
 }
@@ -472,28 +457,23 @@ details.code[open] {
     margin-bottom: 1em;
 }
 
-details.code[open] summary>span {
-    display: none;
-}
-
 details.code summary .name {
     font-size: 1em;
     color: var(--text-medium);
     margin-right: 0.7em;
 }
 
-details.code summary .lang {
-    font-family: "Fira Code", SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
-    font-style: italic;
+details.code:not([open]) > summary > h4.lang.code-up::after {
+    content: "...";
+}
+
+details.code[open] > summary > h4.lang.code-up::after {
+    content: "";
 }
 
 details.code summary::marker {
     color: var(--back-medium);
     font-size: 0.8em;
-}
-
-details.code[open] summary .lang {
-    display: none;
 }
 
 details.code[open] summary.named {
@@ -504,27 +484,17 @@ details.code:not([open]) summary {
     margin-bottom: -5px;
 }
 
-details.code[open] {
-    border-left: 1px solid var(--back-medium);
-}
-
-
 .gutter {
     position: absolute;
-    top: 0;
-    left: -2.3rem;
+    top: -0.2em;
+    left: -2rem;
     width: 2rem;
     padding-right: 0.3rem;
     padding-top: 5px;
     height: calc(100% - 10px);
     z-index: 1;
     transition: opacity 200ms;
-    /* opacity: 0; */
-    font-size: 1em;
-}
-
-.gutter:hover {
-    opacity: 1;
+    font-size: 1.2em;
 }
 
 .gutter * {
@@ -634,6 +604,10 @@ details.expand div.highlight {
     position: relative;
     margin-top: 1em !important;
     margin-bottom: 0em !important;
+}
+
+details.code > summary {
+    height: 1.6em;
 }
 
 details.expand > summary::before {
