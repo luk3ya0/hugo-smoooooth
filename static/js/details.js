@@ -37,14 +37,9 @@ class Accordion {
     
     // Store the current height of the element
     var startHeightNum = this.el.offsetHeight;
-    var startHeight = `${this.el.offsetHeight}px`;
+    var startHeight = `${this.el.offsetHeight - 15}px`;
     // Calculate the height of the summary
-    var endHeight = "";
-    if (this.el.class == "expand") {
-      endHeight = `${this.summary.offsetHeight}px`;
-    } else {
-      endHeight = `${this.summary.offsetHeight + 15}px`;
-    }
+    var endHeight = `${this.summary.offsetHeight}px`;
 
     // If there is already an animation running
     if (this.animation) {
@@ -52,39 +47,16 @@ class Accordion {
       this.animation.cancel();
     }
 
-    if (startHeightNum > window.innerHeight) {
-      // Start a WAAPI animation
-      this.animation = this.el.animate({
-        // Set the keyframes from the startHeight to endHeight
-        height: [startHeight, `${window.innerHeight}px`]
-      }, {
-        duration: 0,
-        easing: 'ease-in'
-      });
-      var duration = 400;
+    var duration = 400;
 
-      // Start a WAAPI animation
-      this.animation = this.el.animate({
-        // Set the keyframes from the startHeight to endHeight
-        height: [`${window.innerHeight}px`, endHeight]
-      }, {
-        duration: duration,
-        easing: 'ease-in'
-      });
-    } else {
-
-      var duration = 400;
-
-      // Start a WAAPI animation
-      this.animation = this.el.animate({
-        // Set the keyframes from the startHeight to endHeight
-        height: [startHeight, endHeight]
-      }, {
-        duration: duration,
-        easing: 'ease-in'
-      });
-
-    }
+    // Start a WAAPI animation
+    this.animation = this.el.animate({
+      // Set the keyframes from the startHeight to endHeight
+      height: [startHeight, endHeight]
+    }, {
+      duration: duration,
+      easing: 'ease-in'
+    });
 
     // When the animation is complete, call onAnimationFinish()
     this.animation.onfinish = () => this.onAnimationFinish(false);

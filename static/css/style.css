@@ -518,7 +518,7 @@ details.code[open] {
     height: calc(100% - 10px);
     z-index: 1;
     transition: opacity 200ms;
-    opacity: 0;
+    /* opacity: 0; */
     font-size: 1em;
 }
 
@@ -639,15 +639,15 @@ details.expand > summary::before {
     display: none;
 }
 
-details.expand > summary h2 {
+details.expand > summary h2, details.expand > summary h3 {
     width: 100%;
     margin-top: 0;
     margin-bottom: 0;
 }
-details.expand > summary h2::after {
+details.expand > summary h2::after, details.expand > summary h3::after {
     content: "...";
 }
-details.expand[open] > summary h2::after {
+details.expand[open] > summary h2::after, details.expand[open] > summary h3::after {
     content: "";
 }
 

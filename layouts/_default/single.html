@@ -17,7 +17,23 @@
         <summary class="ripple"><span></span>
         {{ printf "<h2 %s</h2>\n" (index $parts 0) | safeHTML }}</summary>
         <div class="highlight">
-            {{ printf "%s\n" (index $parts 1) | safeHTML }}
+            {{ $subparagraphs := split (index $parts 1) "<h3 " }}
+            {{ range $subindex, $subp := $subparagraphs }}
+                {{ $subpp := trim $subp " \n" }}
+                {{ if (eq $subindex 0) }}
+                    {{ printf "%s\n" $subpp | safeHTML }}
+                {{ end }}
+                {{ if and (ne $subpp "") (gt $subindex 0) }}
+                    {{ $subparts := split $subpp "</h3>"}}
+                    <details class="expand">
+                        <summary class="ripple"><span></span>
+                        {{ printf "<h3 %s</h3>\n" (index $subparts 0) | safeHTML }}</summary>
+                        <div class="highlight">
+                            {{ printf "%s\n" (index $subparts 1) | safeHTML }}
+                        </div>
+                    </details>
+                {{ end }}
+            {{ end }}
         </div>
     </details>
     {{ end }}
@@ -32,7 +48,13 @@
 <script>
 const openDetailsIfAnchorHidden = evt => {
   const targetDIV = document.querySelector(evt.target.getAttribute("href"));
-  targetDIV.closest("details").open = true;
+  console.log(evt.target.getAttribute("href"))
+  var closestDetails = targetDIV.closest("details");
+  if (closestDetails.parentNode.parentNode.tagName.toLowerCase() == "details") {
+    console.log(closestDetails);
+    closestDetails.parentNode.parentNode.open = true;
+  }
+  closestDetails.open = true;
   if ( !! targetDIV.offsetHeight || targetDIV.getClientRects().length ) return;
   const topPos = targetDIV.getBoundingClientRect().top + window.pageYOffset;
   console.log(topPos);
