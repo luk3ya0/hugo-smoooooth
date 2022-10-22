@@ -510,14 +510,14 @@ div.org-src-container {
 ol {
     position: relative;
     left: 1.9em;
-    margin: 1em 0;
+    margin: 1em;
     padding: 0;
 }
 
 ul {
     position: relative;
     left: 1em;
-    margin: 1em 0;
+    margin: 1em;
     padding: 0;
 }
 
