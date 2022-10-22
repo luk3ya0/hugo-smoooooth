@@ -21,7 +21,9 @@
             {{ range $subindex, $subp := $subparagraphs }}
                 {{ $subpp := trim $subp " \n" }}
                 {{ if (eq $subindex 0) }}
+                    <div class="preamble">
                     {{ printf "%s\n" $subpp | safeHTML }}
+                    </div>
                 {{ end }}
                 {{ if and (ne $subpp "") (gt $subindex 0) }}
                     {{ $subparts := split $subpp "</h3>"}}
