@@ -424,7 +424,7 @@ summary::before{
 details.code[open] summary::before{
     content: "▼ ";
     position: absolute;
-    left: 15px;
+    left: 15.5px;
     top: -0.5em;
 }
 
