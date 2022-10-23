@@ -12,9 +12,9 @@
         {{ printf "%s\n" $pp | safeHTML }}
     {{ end }}
     {{ if and (ne $pp "") (gt $index 0) }}
-    <details class="expand">
+    <details class="expand" data-level="2">
         {{ $parts := split $pp "</h2>"}}
-        <summary class="ripple"><span></span>
+        <summary class="ripple level"><span></span>
         {{ printf "<h2 %s</h2>\n" (index $parts 0) | safeHTML }}</summary>
         <div class="highlight">
             {{ $subparagraphs := split (index $parts 1) "<h3 " }}
@@ -27,7 +27,7 @@
                 {{ end }}
                 {{ if and (ne $subpp "") (gt $subindex 0) }}
                     {{ $subparts := split $subpp "</h3>"}}
-                    <details class="expand">
+                    <details class="expand" data-level="3">
                         <summary class="ripple"><span></span>
                         {{ printf "<h3 %s</h3>\n" (index $subparts 0) | safeHTML }}</summary>
                         <div class="highlight">

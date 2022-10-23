@@ -22,13 +22,30 @@ class Accordion {
     e.preventDefault();
     // Add an overflow on the <details> to avoid highlight overflowing
     this.el.style.overflow = 'hidden';
-    // Check if the element is being closed or is already closed
     if (this.isClosing || !this.el.open) {
       this.open();
       // Check if the element is being openned or is already open
     } else if (this.isExpanding || this.el.open) {
       this.shrink();
     }
+
+    // if (!this.el.querySelector("details.expand") ||
+    //     this.el.dataset.level != "2") {
+    //   if (this.isClosing || !this.el.open) {
+    //     this.open();
+    //     // Check if the element is being openned or is already open
+    //   } else if (this.isExpanding || this.el.open) {
+    //     this.shrink();
+    //   }
+    // } else {
+
+    //   if (this.el.dataset.cycle == null) {
+    //     this.el.dataset.cycle = 0;
+    //   } else {
+    //     this.el.dataset.cycle = (this.el.dataset.cycle + 1) % 3;
+    //   }
+    // }
+    // Check if the element is being closed or is already closed
   }
 
   shrink() {
@@ -59,7 +76,9 @@ class Accordion {
     });
 
     // When the animation is complete, call onAnimationFinish()
-    this.animation.onfinish = () => this.onAnimationFinish(false);
+    this.animation.onfinish = () => {this.onAnimationFinish(false);
+                                     this.summary.classList.add("level");};
+
     // If the animation is cancelled, isClosing variable is set to false
     this.animation.oncancel = () => this.isClosing = false;
   }
@@ -69,6 +88,7 @@ class Accordion {
     this.el.style.height = `${this.el.offsetHeight}px`;
     // Force the [open] attribute on the details element
     this.el.open = true;
+    // console.log(this.el.dataset.level);
     // Wait for the next frame to call the expand function
     window.requestAnimationFrame(() => this.expand());
   }
@@ -114,6 +134,7 @@ class Accordion {
       });
 
     }
+    this.summary.classList.remove("level");
 
     // When the animation is complete, call onAnimationFinish()
     this.animation.onfinish = () => this.onAnimationFinish(true);

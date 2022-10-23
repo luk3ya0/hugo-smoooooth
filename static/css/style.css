@@ -277,7 +277,7 @@ div#container {
     margin: 0 auto;
 }
 
-img {
+svg, img {
     max-width: 100%;
 }
 
@@ -311,7 +311,7 @@ img {
         max-width: 100%;
         margin: 0 1em !important;
     }
-    img {
+    img, svg {
         max-width: 100%;
     }
 }
@@ -509,7 +509,7 @@ div.org-src-container {
 
 ol {
     position: relative;
-    left: 2.3em;
+    left: 2em;
     margin-top: 1em;
     margin-bottom: 1em;
     margin-right: 1em;
@@ -530,7 +530,7 @@ center {
     margin-bottom: 1em;
 }
 
-center img {
+center img, center svg {
     max-width: 100%;
     height: auto;
 }
@@ -608,10 +608,12 @@ details.expand > summary h2, details.expand > summary h3 {
     margin-top: 0;
     margin-bottom: 0;
 }
-details.expand > summary h2::after, details.expand > summary h3::after {
+details.expand > summary.level h2::after,
+details.expand > summary h3::after {
     content: "...";
 }
-details.expand[open] > summary h2::after, details.expand[open] > summary h3::after {
+
+details.expand[open] > summary h3::after {
     content: "";
 }
 
