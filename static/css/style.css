@@ -644,7 +644,7 @@ details.code div.highlight {
 
 svg, g, text {
     color: var(--text-dark);
-    font-size: 14px;
+    font-size: 12px;
     font-family: "Fira Code";
 }
 .none-stroke {
