@@ -558,19 +558,19 @@ center img, center svg {
 }
 
 #TableOfContents li > a:hover, a:hover {
-  color: var(--text-gray);
-  background-image: var(--squiggle-image);
-  background-position: bottom;
-  background-repeat: repeat-x;
-  background-size: 14px 5px;
-  border-bottom: 0;
-  padding-bottom: .3em;
-  text-decoration: none;
+    color: var(--text-gray);
+    background-image: var(--squiggle-image);
+    background-position: bottom;
+    background-repeat: repeat-x;
+    background-size: 14px 5px;
+    border-bottom: 0;
+    padding-bottom: .3em;
+    text-decoration: none;
 }
 
 nav > a:hover, a.btn {
-  background-image: none;
-  /* text-decoration: none; */
+    background-image: none;
+    /* text-decoration: none; */
 }
 
 details.expand > summary {
@@ -618,18 +618,18 @@ details.expand[open] > summary h3::after {
 
 /* Ripple effect */
 .ripple {
-  background-position: center;
-  transition: background 1.2s;
-  border-radius: 125px;
+    background-position: center;
+    transition: background 1.2s;
+    border-radius: 125px;
 }
 .ripple:hover {
-  background: var(--back-light) radial-gradient(circle, transparent 1%, var(--back-light) 1%) center/15000%;
-  /* text-shadow: 1px 1px 7px #030303; */
+    background: var(--back-light) radial-gradient(circle, transparent 1%, var(--back-light) 1%) center/15000%;
+    /* text-shadow: 1px 1px 7px #030303; */
 }
 .ripple:active {
-  background-color: var(--back-medium);
-  background-size: 100%;
-  transition: background 0s;
+    background-color: var(--back-medium);
+    background-size: 100%;
+    transition: background 0s;
 }
 
 details.code pre {
@@ -641,3 +641,46 @@ details.code div.highlight {
     margin-top: 0 !important;
     margin-bottom: 0 !important;
 }
+
+svg {
+    color: var(--text-light);
+    font-size: 14px;
+    font-family: "Fira Code";
+}
+.none-stroke {
+    fill: none;
+    stroke: gray;
+}
+.fill-stroke {
+    fill: var(--back-white);
+    stroke: var(--text-medium);
+}
+foreignObject {
+    width: 100%;
+    height: 100%;
+}
+.leftdiv {
+    overflow: visible;
+    text-align: left;
+}
+.centerdiv {
+    box-sizing:border-box;
+    text-align:center
+}
+.normaldiv {
+    display:inline-block;
+    line-height:1.2;
+    white-space:normal;
+    overflow-wrap:normal
+}
+.flexcenter {
+    display:flex;
+    align-items:unsafe center;
+    justify-content:unsafe center;
+}
+.flexstart {
+    display:flex;
+    align-items:unsafe center;
+    justify-content:unsafe flex-start;
+}
+.flexzero {height: 1px;}
