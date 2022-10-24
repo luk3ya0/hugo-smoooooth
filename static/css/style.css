@@ -642,19 +642,50 @@ details.code div.highlight {
     margin-bottom: 0 !important;
 }
 
+@media (prefers-color-scheme: dark) {
+    #theme-switch:checked ~ #page {
+        --svg-fill: #ebebeb;
+    }
+
+    #page {
+        --svg-fill: #333333;
+    }
+}
+
+/*! end normalise.css */
+@media (prefers-color-scheme: light) {
+    #page {
+        --svg-fill: #ebebeb;
+    }
+
+    #theme-switch:checked ~ #page {
+        --svg-fill: #333333;
+    }
+}
+
 svg {
-    color: var(--text-light);
+    color: #808080;
     font-size: 14px;
     font-family: "Fira Code";
 }
+
 .none-stroke {
     fill: none;
-    stroke: gray;
+    stroke: #808080;
 }
 .fill-stroke {
-    fill: var(--back-white);
-    stroke: var(--text-medium);
+    fill: var(--svg-fill);
+    stroke: #808080;
 }
+.fill-none {
+    fill: #333333;
+    stroke: none;
+}
+.none-none {
+    fill: none;
+    stroke: none;
+}
+
 foreignObject {
     width: 100%;
     height: 100%;
