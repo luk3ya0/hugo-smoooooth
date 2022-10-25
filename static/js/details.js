@@ -64,20 +64,32 @@ class Accordion {
       this.animation.cancel();
     }
 
-    var duration = 400;
+    var duration = 200;
 
-    // Start a WAAPI animation
-    this.animation = this.el.animate({
-      // Set the keyframes from the startHeight to endHeight
-      height: [startHeight, endHeight]
-    }, {
-      duration: duration,
-      easing: 'ease-in'
-    });
+    if (startHeightNum > window.innerHeight) {
+      // Start a WAAPI animation
+      this.animation = this.el.animate({
+        // Set the keyframes from the startHeight to endHeight
+        height: [`${window.innerHeight}px`, endHeight]
+      }, {
+        duration: duration,
+        easing: 'ease-in'
+      });
+    } else {
+      this.animation = this.el.animate({
+        // Set the keyframes from the startHeight to endHeight
+        height: [startHeight, endHeight]
+      }, {
+        duration: duration,
+        easing: 'ease-in'
+      });
+    }
 
     // When the animation is complete, call onAnimationFinish()
     this.animation.onfinish = () => {this.onAnimationFinish(false);
-                                     this.summary.classList.add("level");};
+                                     this.summary.classList.add("level");
+                                     this.el.height = endHeight;
+                                    };
 
     // If the animation is cancelled, isClosing variable is set to false
     this.animation.oncancel = () => this.isClosing = false;
@@ -118,9 +130,9 @@ class Accordion {
       // Start a WAAPI animation
       this.animation = this.el.animate({
         // Set the keyframes from the startHeight to endHeight
-        height: [startHeight, endHeight]
+        height: [startHeight, `${window.innerHeight}px`]
       }, {
-        duration: 800,
+        duration: 200,
         easing: 'ease-out'
       });
     } else {
@@ -129,7 +141,7 @@ class Accordion {
         // Set the keyframes from the startHeight to endHeight
         height: [startHeight, endHeight]
       }, {
-        duration: 400,
+        duration: 200,
         easing: 'ease-out'
       });
 
@@ -137,7 +149,9 @@ class Accordion {
     this.summary.classList.remove("level");
 
     // When the animation is complete, call onAnimationFinish()
-    this.animation.onfinish = () => this.onAnimationFinish(true);
+    this.animation.onfinish = () => {this.onAnimationFinish(true);
+                                     this.el.height = endHeight;
+                                     };
     // If the animation is cancelled, isExpanding variable is set to false
     this.animation.oncancel = () => this.isExpanding = false;
   }
