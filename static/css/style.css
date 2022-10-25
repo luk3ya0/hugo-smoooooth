@@ -619,7 +619,7 @@ details.expand[open] > summary h3::after {
 /* Ripple effect */
 .ripple {
     background-position: center;
-    transition: background 1.2s;
+    transition: background .5s;
     border-radius: 125px;
 }
 .ripple:hover {
