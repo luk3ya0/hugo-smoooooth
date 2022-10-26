@@ -642,6 +642,8 @@ details.code div.highlight {
     margin-bottom: 0 !important;
 }
 
+/*---------------------------------- for svg */
+
 @media (prefers-color-scheme: dark) {
     #theme-switch:checked ~ #page {
         --svg-fill: #ebebeb;
@@ -715,3 +717,37 @@ foreignObject {
     justify-content:unsafe flex-start;
 }
 .flexzero {height: 1px;}
+
+/*------------------------------------------- for table*/
+table {
+  display: block;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+table::-webkit-scrollbar {
+    display: none;
+}
+
+table::-webkit-scrollbar {
+    display: none;
+}
+
+
+thead > tr {
+    border-bottom: 1px solid var(--text-dark);
+}
+
+tbody > tr:last-child {
+    border-bottom: none;
+}
+
+th, td {
+    border-left: 1px solid var(--text-dark);
+    border-right: 1px solid var(--text-dark);
+    min-height: 28x;
+    padding: 7px 21px;
+    white-space: pre;
+}
