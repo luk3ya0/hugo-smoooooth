@@ -20,7 +20,7 @@
             {{ $subparagraphs := split (index $parts 1) "<h3 " }}
             {{ range $subindex, $subp := $subparagraphs }}
                 {{ $subpp := trim $subp " \n" }}
-                {{ if (eq $subindex 0) }}
+                {{ if and (eq $subindex 0) (ne $subpp "") }}
                     <div class="preamble">
                     {{ printf "%s\n" $subpp | safeHTML }}
                     </div>

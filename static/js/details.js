@@ -20,31 +20,51 @@ class Accordion {
   onClick(e) {
     // Stop default behaviour from the browser
     e.preventDefault();
-    // Add an overflow on the <details> to avoid highlight overflowing
-    this.el.style.overflow = 'hidden';
-    if (this.isClosing || !this.el.open) {
-      this.open();
-      // Check if the element is being openned or is already open
-    } else if (this.isExpanding || this.el.open) {
-      this.shrink();
+
+    if (this.el.dataset.level == "2") {
+      var preamble = this.el.querySelector(".preamble") != null;
+      var expandable = this.el.querySelector("details.expand") != null;
+      if (preamble && expandable) {
+        this.el.dataset.cyclevis = true;
+      }
     }
 
-    // if (!this.el.querySelector("details.expand") ||
-    //     this.el.dataset.level != "2") {
-    //   if (this.isClosing || !this.el.open) {
-    //     this.open();
-    //     // Check if the element is being openned or is already open
-    //   } else if (this.isExpanding || this.el.open) {
-    //     this.shrink();
-    //   }
-    // } else {
+    if (this.el.dataset.cyclevis) {
+      if (this.el.dataset.cycle == null) {
+        this.el.dataset.cycle = "0";
+      }
 
-    //   if (this.el.dataset.cycle == null) {
-    //     this.el.dataset.cycle = 0;
-    //   } else {
-    //     this.el.dataset.cycle = (this.el.dataset.cycle + 1) % 3;
-    //   }
-    // }
+      if (this.el.dataset.cycle == "0") {
+        this.el.querySelector('.preamble').style.display = "none";
+        this.el.querySelectorAll('details.expand').forEach((el) => {
+          el.open = false;
+        });
+        this.el.open = true;
+        this.summary.classList.add("level");
+        this.el.dataset.cycle = String((1 + Number(this.el.dataset.cycle)) % 3);
+      } else if (this.el.dataset.cycle == "1") {
+        this.el.querySelector('.preamble').style.display = "block";
+        this.el.querySelectorAll('details.expand').forEach((el) => {
+          el.open = true;
+        });
+        this.summary.classList.remove("level");
+        this.el.dataset.cycle = String((1 + Number(this.el.dataset.cycle)) % 3);
+      } else {
+        this.shrink()
+        this.el.dataset.cycle = String((1 + Number(this.el.dataset.cycle)) % 3);
+      }
+
+    } else {
+      // Add an overflow on the <details> to avoid highlight overflowing
+      this.el.style.overflow = 'hidden';
+      if (this.isClosing || !this.el.open) {
+        this.open();
+        // Check if the element is being openned or is already open
+      } else if (this.isExpanding || this.el.open) {
+        this.shrink();
+      }
+    }
+
     // Check if the element is being closed or is already closed
   }
 
@@ -109,7 +129,11 @@ class Accordion {
     // Set the element as "being expanding"
     this.isExpanding = true;
     // Get the current fixed height of the element
-    var startHeight = `${this.el.offsetHeight}px`;
+    if (this.el.dataset.cyclevis) {
+      var startHeight = `${this.summary.offsetHeight + this.el.offsetHeight}px`;
+    } else {
+      var startHeight = `${this.el.offsetHeight}px`;
+    }
     // Calculate the open height of the element (summary height + highlight height)
     var endHeightNum = this.summary.offsetHeight + this.highlight.offsetHeight;
     var endHeight = "";
@@ -146,7 +170,9 @@ class Accordion {
       });
 
     }
-    this.summary.classList.remove("level");
+    if (this.el.dataset.cycle != "1") {
+      this.summary.classList.remove("level");
+    }
 
     // When the animation is complete, call onAnimationFinish()
     this.animation.onfinish = () => {this.onAnimationFinish(true);
