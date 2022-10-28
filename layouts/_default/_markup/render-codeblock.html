@@ -7,7 +7,7 @@
         <button title='Copy to clipboard' onclick='copyPreToClipbord(this)'>⎘</button>
     </div>
     <div class="org-src-container">
-    {{ highlight .Inner $lang }}
+    {{ highlight (trim .Inner " \n") $lang }}
     </div>
     <h4 class="lang code-bottom">#+END_SRC</h4>
 </details>

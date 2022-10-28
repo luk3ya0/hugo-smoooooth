@@ -441,22 +441,22 @@ details.code summary {
     color: var(--text-light);
 }
 
-h4.lang {
+h4.code-up, h4.code-bottom {
     font-size: .8em !important;
     display: block;
     color: var(--code-foreground);
     margin: 0 !important;
 }
 
-h4.lang::before {
+h4.code-up::before, h4.code-bottom::before {
     content: "" !important;
 }
 
-details.code:not([open]) > summary > h4.lang.code-up::after {
+details.code:not([open]) > summary > h4.code-up::after {
     content: "...";
 }
 
-details.code[open] > summary > h4.lang.code-up::after {
+details.code[open] > summary > h4.code-up::after {
     content: "";
 }
 
