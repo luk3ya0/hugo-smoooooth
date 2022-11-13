@@ -374,7 +374,9 @@ pre code  {
 
 pre code {
     display: block;
-    padding: .8em;
+    /* padding: .8em; */
+    padding-top: .8em;
+    padding-bottom: .8em;
     white-space: pre;
     line-height: 1.7;
 }
@@ -503,7 +505,7 @@ details.code[open] > summary > h4.code-up::after {
 
 div.org-src-container {
     position: relative;
-    left: 6px !important;
+    /* left: 6px !important; */
     /* border-left: 1px solid var(--back-medium); */
 }
 
