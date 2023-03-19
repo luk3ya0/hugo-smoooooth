@@ -722,11 +722,11 @@ foreignObject {
 
 /*------------------------------------------- for table*/
 table {
-  display: block;
-  max-width: -moz-fit-content;
-  max-width: fit-content;
-  overflow-x: auto;
-  white-space: nowrap;
+    display: block;
+    max-width: -moz-fit-content;
+    max-width: fit-content;
+    overflow-x: auto;
+    white-space: nowrap;
 }
 
 table::-webkit-scrollbar {
