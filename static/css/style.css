@@ -209,6 +209,7 @@ details.code summary {
 }
 
 #switch-label {
+    font-family: "Apple Color Emoji", "Noto Color Emoji";
     position: fixed;
     bottom: 4rem;
     right: 3rem;
@@ -254,8 +255,9 @@ details.code summary {
 /* occupy all the space */
 #page {
     min-height: 100%;
+    overflow: auto;
     width: 100%;
-    height: auto;
+    /*height: 100%;*/
     margin: 0;
     padding: 0;
     color: var(--text-dark);
@@ -753,3 +755,4 @@ th, td {
     padding: 7px 21px;
     white-space: pre;
 }
+
