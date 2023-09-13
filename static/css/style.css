@@ -756,3 +756,6 @@ th, td {
     white-space: pre;
 }
 
+.copy-path {
+    fill: var(--text-light);
+}
