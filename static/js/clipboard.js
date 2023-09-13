@@ -9,16 +9,14 @@ function addCopyButtons(clipboard) {
                 function() {
                     /* Chrome doesn't seem to blur automatically, leaving the button
                        in a focused state */
-		    var preservedText = button.innerText;
-                    button.innerText = '✓';
-                    button.style.color = "green";
+		    var innerHTML = button.innerHTML;
+		    button.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16"><path fill="green" d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"></path></svg>'
                     setTimeout(function() {
-                        button.innerText = preservedText;
-                        button.style.color = "gray";
+		        button.innerHTML = innerHTML;
                     }, 2000);
                 },
                 function(error) {
-                    button.innerText = '✘';
+		    button.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12" width="12" height="12"><path fill="red" d="M2.22 2.22a.749.749 0 0 1 1.06 0L6 4.939 8.72 2.22a.749.749 0 1 1 1.06 1.06L7.061 6 9.78 8.72a.749.749 0 1 1-1.06 1.06L6 7.061 3.28 9.78a.749.749 0 1 1-1.06-1.06L4.939 6 2.22 3.28a.749.749 0 0 1 0-1.06Z"></path></svg>'
                     console.error(error);
                 }
             );
