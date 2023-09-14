@@ -316,6 +316,9 @@ svg, img {
     img, svg {
         max-width: 100%;
     }
+    .preamble {
+        margin-left: 1em;
+    }
 }
 
 div#footer {
